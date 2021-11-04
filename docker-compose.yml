@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  legacy:
+    tty: true
+    build:
+      context: ./docker
+      dockerfile: ./Dockerfile
+    container_name: legacy
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8000:8000
